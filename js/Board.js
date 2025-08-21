@@ -34,7 +34,7 @@ export const Board = {
 
     },
     downTentule: function(i){
-        this.tentules[i] = null;
+       this.tentules.splice(i,1);
     },
     generate: function(screen){
         let width = this.tentuleWidth;

@@ -30,6 +30,15 @@ export const Game = {
         Board.render(this.CTX);
         Ball.render(this.CTX);
         
+        if (!Board.tentules.length)
+        {
+            setTimeout(function(){
+            window.document.body.innerHTML = `
+           <h1> Game Over! </h1>
+            `;
+            },600);
+        }
+        
         this.lastTm = currTm;
     }
 };

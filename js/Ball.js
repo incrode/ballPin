@@ -96,17 +96,21 @@ export const Ball = {
         }, minusDelay);
     },
     collides: function(){
+            
         Board.tentules.forEach((tentule,i) => {
+            
             if (tentule == null) return;
 
             if (tentule.b > this.ballPos.b -25 && tentule.a >= this.ballPos.a - 25 && tentule.a <= this.ballPos.a + 50)
             {
                 Board.downTentule(i);
             }
+            
+            
         });
     },
     render: function (ctx) {
-        if (this.move) {
+        if (this.move && Board.tentules.length) {
             if (this.hx === 0 || Math.sign(this.hx) !== Math.sign(this.hx - this.frxnX)) {
                 this.hx = 0;
             } else {

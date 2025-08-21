@@ -11,6 +11,7 @@ html,body
     overflow:hidden;
     user-select:none;
     display: flex;
+    color: white;
     align-items: center;
     justify-content: center;
     background: linear-gradient(rgb(138, 62, 0),rgb(208, 87, 0));
